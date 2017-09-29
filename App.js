@@ -1,12 +1,13 @@
 import React from 'react';
 import { Platform, StatusBar } from 'react-native';
-import HomeScreen from './components/HomeScreen';
-import ProductDetail from './components/ProductDetail';
 import { StackNavigator } from 'react-navigation';
+
+import HomeScreen from './src/screens/HomeScreen';
+import ProductDetailScreen from './src/screens/ProductDetailScreen';
 
 const Navigator = StackNavigator({
   Home: { screen: HomeScreen },
-  ProductDetail: { screen: ProductDetail },
+  ProductDetail: { screen: ProductDetailScreen },
 },
 {
   cardStyle: {

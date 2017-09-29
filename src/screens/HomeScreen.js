@@ -6,7 +6,7 @@ import {
     ScrollView
 } from 'react-native';
 
-import HomeTab from './../HomeTab';
+import HomeTab from './../components/HomeTab';
 
 export default class HomeScreen extends React.Component {
 
@@ -15,6 +15,8 @@ export default class HomeScreen extends React.Component {
     };
 
     render() {
-        return (<HomeTab screenProps={{navigation : this.props.navigation}}/>);
+        return (
+            <HomeTab screenProps={{ navigation: this.props.navigation }} />
+        );
     }
 }

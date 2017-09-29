@@ -7,10 +7,10 @@ import {
     TouchableHighlight
 } from 'react-native';
 
-import ProductHeader from './../ProductHeader';
-import ProductButton from './../ProductButton';
+import ProductHeader from './../components/ProductHeader';
+import ProductButton from './../components/ProductButton';
 
-export default class ProductDetail extends React.Component {
+export default class ProductDetailScreen extends React.Component {
 
     static navigationOptions = {
         title: 'Detail',
@@ -48,13 +48,13 @@ export default class ProductDetail extends React.Component {
                     <ProductHeader product={product} fontColor={'#FFF'} />
                     <Text style={bodyStyles.title}>{product.title}</Text>
                 </View>
-                <View style={{ position: 'absolute', bottom: 0, backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
+                <View style={{ position: 'absolute', bottom: 0, backgroundColor: 'rgba(0, 0, 0, 0.6)'}}>
                     <View style={{flexDirection: 'row'}}>
-                        <ProductButton onPress={this.web} flex={0} />
-                        <ProductButton onPress={this.comment} flex={0} />
-                        <ProductButton onPress={this.share} flex={0} />
+                        <ProductButton onPress={this.web} flex={1} iconColor="#FFF" iconSize={24} iconName="md-share"/>
+                        <ProductButton onPress={this.web} flex={1} iconColor="#FFF" iconSize={24} iconName="md-share"/>
+                        <ProductButton onPress={this.web} flex={1} iconColor="#FFF" iconSize={24} iconName="md-share"/>
                     </View>
-                    <View style={{padding: 10, backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
+                    <View style={{padding: 10, backgroundColor: 'rgba(0, 0, 0, 0.3)'}}>
                         <Text style={{color: '#FFF', textAlign: 'center'}}>{product.description}</Text>
                     </View>
                 </View>

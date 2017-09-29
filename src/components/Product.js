@@ -7,8 +7,8 @@ import {
     TouchableHighlight
 } from 'react-native';
 
-import ProductHeader from './../ProductHeader';
-import ProductButton from './../ProductButton';
+import ProductHeader from './ProductHeader';
+import ProductButton from './ProductButton';
 
 export default class Product extends React.Component {
 
@@ -45,9 +45,9 @@ export default class Product extends React.Component {
                     </View>
                 </TouchableHighlight>
                 <View style={{ flex: 1, flexDirection: 'row', width: '100%' }}>
-                    <ProductButton onPress={this.web} flex={1} backgroundColor={'#3498db'} />
-                    <ProductButton onPress={this.comment} flex={1} backgroundColor={'#3498db'}/>
-                    <ProductButton onPress={this.share} flex={1} backgroundColor={'#3498db'}/>
+                    <ProductButton onPress={this.web} flex={1} backgroundColor="#3498db" iconSize={24} iconName="md-globe" iconColor="#FFF" />
+                    <ProductButton onPress={this.web} flex={1} backgroundColor="#3498db" iconSize={24} iconName="md-share" iconColor="#FFF" />
+                    <ProductButton onPress={this.web} flex={1} backgroundColor="#3498db" iconSize={24} iconName="md-share" iconColor="#FFF" />
                 </View>
             </View>
         );

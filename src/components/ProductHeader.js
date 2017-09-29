@@ -7,7 +7,6 @@ import {
     StyleSheet
 } from 'react-native';
 
-
 export default class ProductHeader extends React.Component {
 
     render() {

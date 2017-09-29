@@ -7,18 +7,18 @@ import {
     Button
 } from 'react-native';
 
-import Product from './../Product';
+import Article from './../components/Article';
 
-export default class ProductScreen extends React.Component {
+export default class ArticleScreen extends React.Component {
 
     static navigationOptions = {
-        tabBarLabel: 'Product'
+        tabBarLabel: 'Article'
     };
 
     constructor() {
         super();
         this.state = {
-            products: [],
+            articles: [],
         };
 
         this.componentDidMount = this.componentDidMount.bind(this);
@@ -28,10 +28,12 @@ export default class ProductScreen extends React.Component {
 
         try {
 
-            const res = await fetch('https://www.overhet.com/api/posts');
-            const products = await res.json();
+            const res = await fetch('https://www.overhet.com/api/articles');
+            const articles = await res.json();
 
-            this.setState({ products });
+            console.log(articles);
+
+            this.setState({ articles });
 
         } catch (err) {
 
@@ -39,11 +41,11 @@ export default class ProductScreen extends React.Component {
         }
     }
 
-    generateProducts = (navigate) => {
-        return this.state.products.map((product) => {
-            return <Product
-                key={product.id}
-                product={product}
+    generateArticles = (navigate) => {
+        return this.state.articles.map((article) => {
+            return <Article
+                key={article.id}
+                article={article}
                 navigate={navigate} />
         });
     }
@@ -54,7 +56,7 @@ export default class ProductScreen extends React.Component {
 
         return (
             <ScrollView>
-                {this.generateProducts(navigate)}
+                {this.generateArticles(navigate)}
             </ScrollView>
         );
     }
